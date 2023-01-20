@@ -55,7 +55,8 @@ let pickCard = axios.get("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_
     return axios.get(`https://deckofcardsapi.com/api/deck/${data.data.deck_id}/draw/?count=1`)
 })
 .then(data => {
-    console.log(data.data.cards[0].value + " of " + data.data.cards[0].suit)
+    console.log(data.data.cards[0].value + " of " + data.data.cards[0].suit);
+    console.log(data.data.cards[0].image);
 })
 .catch(err => {
     console.log(err)
